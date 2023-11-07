@@ -1,1 +1,1 @@
-# Projeto-Faculdade
+# Projeto-Faculdade-Site-Paradigmas
