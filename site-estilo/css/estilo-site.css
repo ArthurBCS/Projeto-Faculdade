@@ -1,0 +1,589 @@
+/* Código CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Código Básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;&display=swap');
+.hamburger-menu {
+  display: none;
+}
+body{
+  font-family: "Open sans", sans-serif;
+  color: #000000;
+}
+a{
+  color: #5c9f24;
+}
+a:hover {
+  color: #74c92d;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Roboto", sans-serif;
+}
+#header{
+  background: #000000;
+  padding: 15px;
+}
+#header .logo{
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+#header .logo a{
+  color: #fff;
+}
+#header .logo a:hover{
+  color: #4070F4;
+}
+  /* Menu de Navegação */
+.nav-menu ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-menu > ul{
+  display: flex;
+}
+.nav-menu > ul > li{
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 22px;
+}
+.nav-menu a{
+  display: block;
+  position: relative;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  padding: 0 4px;
+  text-transform: uppercase;
+  }
+  .nav-menu > ul > li a::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6%;
+  left: 0;
+  background-color: #4070F4;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.8s ease-in-out;  
+  }
+  .nav-menu a:hover::before,
+  .nav-menu li:hover > a::before,
+  .nav-menu .active > a::before{
+    visibility: visible;
+    width: 100%;
+  }
+  .nav-menu a:hover,
+  .nav-menu .active > a,
+  .nav-menu li:hover > a{
+    color: #fff;
+  }
+  /* Botão "Contato" */
+  .get-started-btn{
+    margin-left: 25px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 6px 25px 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 13px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid #4070F4;
+  }
+  .get-started-btn:hover {
+    background: #4070F4;
+    color: #fff;
+  }
+  
+
+
+  
+  /* Responsividade */
+  @media (max-width: 999px){
+
+
+    .titulo-cabecalho-bootstrap .titulo {
+      font-size: 1.5625em;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: -1.0em;
+    }
+    
+    .titulo-cabecalho-bootstrap .texto {
+      font-size: 1.125em;
+      color: #fff;
+      margin-left: -1.5em;
+    }
+
+    .titulo-cabecalho-bootstrap-1 h3{
+      text-align: left;
+
+    }
+    
+    .get-started-btn{
+      margin: 0 30px 0 0;
+      padding: 6px 18px;
+    }
+    /* Estilo para o ícone do menu hambúrguer */
+.hamburger-menu {
+  display: block;
+  position: absolute;
+  right: 13px; /* Ajuste a distância da direita conforme necessário */
+  font-size: 25px;
+}
+
+.nav-menu > ul > li a::before{
+  display: none;
+
+}
+
+
+/* Estilo para a classe .custom-nav-menu */
+.custom-nav-menu {
+  position: absolute; /* Mova o menu para a parte superior da página */
+  top: 100%; /* Alinhe o menu abaixo do ícone do menu hambúrguer */
+  left: 0.0em; /* Alinhe o menu à esquerda */
+}
+  }
+
+/* Responsividade para Iphone */
+@media (max-width: 393px) {
+  .titulo-cabecalho-bootstrap .titulo{
+    font-size: 1.375em;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    margin-left: -1.3em;
+  }
+
+  .titulo-cabecalho-bootstrap .texto{
+    font-size: 1.125em; /* Define um tamanho de fonte específico para elementos p com classe .texto */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+
+/* Responsividade */
+@media (max-width: 999px) {
+
+  .logo-image {
+    max-width: 70px;
+      margin-right: 10px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
+      margin-left: -15%;
+  }
+  .get-started-btn {
+    margin: 0 30px 0 0;
+    padding: 6px 18px;
+  }
+
+  /* Estilo para o ícone do menu hambúrguer */
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 13px; /* Ajuste a distância da direita conforme necessário */
+    font-size: 25px;
+  }
+  .nav-menu {
+    /* Seus estilos existentes da barra de navegação */
+    transition: opacity 0.3s; /* Adicione uma transição de 0.3 segundos para o efeito de desvanecimento */
+  }
+  
+  .nav-menu.recolhida {
+    opacity: 0; /* Torna a barra de navegação transparente quando a classe 'recolhida' é aplicada */
+    pointer-events: none; /* Impede a interação com a barra de navegação recolhida */
+  }
+  
+
+  .nav-menu > ul > li a::before {
+    display: none;
+  }
+
+
+
+
+
+  /* Estilo para mostrar o menu como colunas quando expandido */
+.custom-nav-menu.show-menu ul {
+  display: flex;
+  flex-direction: column; /* Exibir os itens do menu em colunas */
+  align-items: center; /* Centralizar os itens na coluna */
+  text-align: center; /* Centralizar o texto */
+}
+
+.custom-nav-menu.show-menu a {
+  padding: 6px; /* Ajuste o espaçamento dos itens de menu no menu responsivo */
+  display: block; /* Certifique-se de que os itens de menu ocupem toda a largura */
+  color: white; /* Defina a cor do texto para branco */
+  text-decoration: none; /* Remover sublinhado dos links */
+  transition: color 0.2s; /* Adicionar uma transição suave de cor */
+}
+
+.custom-nav-menu.show-menu a:hover {
+  color: #4070F4; /* Cor ao passar o mouse sobre os itens do menu */
+}
+
+
+  /* Estilo para a classe .custom-nav-menu */
+  .custom-nav-menu {
+    position: absolute; /* Mova o menu para a parte superior da página */
+    top: 100%; /* Alinhe o menu abaixo do ícone do menu hambúrguer */
+    left: 0.0em; /* Alinhe o menu à esquerda */
+    background: #333; /* Adicione um fundo para o menu responsivo */
+    width: 100%; /* Faça o menu ocupar a largura total da tela */
+    display: none; /* Inicialmente, oculte o menu responsivo */
+  }
+  /* Estilo para os itens de menu no menu de navegação */
+  .custom-nav-menu a {
+    padding: 1em; /* Ajuste o espaçamento dos itens de menu no menu responsivo */
+    display: block; /* Certifique-se de que os itens de menu ocupem toda a largura */
+    color: white; /* Defina a cor do texto para branco */
+  }
+
+  /* Estilo para mostrar o menu como colunas quando expandido */
+  .custom-nav-menu.show-menu {
+    display: block; /* Exiba o menu responsivo quando a classe show-menu está presente */
+  }
+}
+
+.close-icon .fa-times {
+  background: -webkit-linear-gradient(45deg, #1d4ed8, #1b3c5d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Necessário para background-clip */
+}
+
+
+.hamburger-icon .fa-bars {
+    background: -webkit-linear-gradient(45deg, #1d4ed8, #1b3c5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Necessário para background-clip */
+  }
+  
+.hamburger-icon {
+    display: block; /* Mostra por padrão */
+  }
+  
+  .close-icon {
+    display: none; /* Oculta por padrão */
+  }
+  
+  /* Quando o menu estiver ativo, esconde o ícone do hambúrguer e mostra o "X" */
+  .show-menu .hamburger-icon {
+    display: none;
+  }
+  
+  .show-menu .close-icon {
+    display: block;
+  }
+  
+
+
+
+/* Site História computação*/
+.cabecalho-historia-computacao{
+    margin-top: 130px;
+    transition: margin-top 0.3s; /* Adicione uma transição suave */
+}
+.cabecalho-historia-computacao h2{
+  font-size: 1.5625em;
+}
+.cabecalho-historia-computacao p{
+font-size: 1.125em;
+}
+
+/* Site História programação*/
+.cabecalho-historia-programacao{
+  margin-top: 130px;
+  transition: margin-top 0.3s; /* Adicione uma transição suave */
+}
+.cabecalho-historia-programacao h2{
+font-size: 1.5625em;
+}
+.cabecalho-historia-programacao p{
+font-size: 1.125em;
+}
+
+/* Site Paradigmas*/
+.cabecalho-paradigmas{
+  margin-top: 130px;
+  transition: margin-top 0.3s; /* Adicione uma transição suave */
+}
+.cabecalho-paradigmas h2{
+font-size: 1.5625em;
+}
+.cabecalho-paradigmas p{
+font-size: 1.125em;
+}
+
+
+
+
+
+
+.titulo-cabecalho-bootstrap {
+  background-color: #333;
+  margin-top: 150px;
+  color: #fff;
+  border-radius: 18px;
+  padding: 5rem !important;
+  padding-top: 3rem !important;
+  padding-right: 2rem !important;
+  padding-bottom: 5rem !important;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: margin-top 0.3s; /* Adicione uma transição suave */
+  
+}
+
+.titulo-cabecalho-bootstrap h2 {
+  font-size: 1.5625em;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.titulo-cabecalho-bootstrap p {
+  margin-top: 30px;
+  font-size: 1.125em;
+  color: #fff;
+  text-align: left;
+}
+
+.estilo{
+  color: #4070F4;
+}
+
+/* Estilo padrão para os nomes */
+.nome {
+  color: #fff;
+}
+
+/* Estilo para os nomes quando o mouse está sobre eles (hover) */
+.nome:hover {
+  color: #fff; 
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* Segundo TxT */
+.titulo-cabecalho-bootstrap-1{
+  margin-top: 60px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-cabecalho-bootstrap-1 h3 {
+  font-size: 1.75em;
+  color: #000;
+  font-weight: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.titulo-cabecalho-bootstrap-1 p {
+  font-size: 1.125em;
+  color: #000;
+  margin: 20px;
+}
+.body1{
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #fff;
+}
+.slide-container{
+  width: 33.33%;
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0 ;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #cdcdcd;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content:'';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #cdcdcd;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #cdcdcd;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070f4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.descricao{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+.swiper-navBtn{
+  color: #6E93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #6E93f7;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 40px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination.bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination.bullet{
+  background-color: #4070F4;
+}
+@media screen and(max-width:768px){
+  .slide-content{
+    display: none;
+  }
+  .swiper-navBtn{
+    margin: 0 10px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Estilização para o rodapé */
+.rodape {
+  margin-top: 110px;
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  padding: 20px 0; /* Espaçamento interno para o conteúdo do rodapé */
+  width: 100%; /* Ocupa toda a largura disponível */
+  position: absolute; /* Posição absoluta para ignorar limitações dos elementos pai */
+  left: 0; /* Alinhar o rodapé à margem esquerda */
+}
+
+/* Estilização para os links no rodapé */
+.rodape a {
+  color: #fff; /* Cor dos links no rodapé */
+  text-decoration: none; /* Remover sublinhado dos links */
+}
+
+/* Estilização para os links no rodapé no hover (ao passar o mouse) */
+.rodape a:hover {
+text-decoration: underline; /* Adicionar sublinhado no hover dos links */
+}
+
+/* Estilização para a seção "Links Úteis" */
+.rodape h4 {
+font-size: 18px; /* Tamanho da fonte do título "Links Úteis" */
+margin-bottom: 10px; /* Espaçamento inferior abaixo do título */
+}
+
+/* Estilização para a seção "Contato" */
+.rodape p {
+  font-size: 17px; /* Tamanho da fonte para informações de contato */
+  color: #fff;
+}
+.highlighted-text {
+  font-size: 24px; /* Tamanho desejado */
+  font-weight: bold; /* Peso da fonte desejado, se necessário */
+  /* Outros estilos, como cor, fundo, etc. */
+}
+.contact-info {
+  text-align: right; /* Alinhe o conteúdo à esquerda */
+}
+.logo {
+    display: flex;
+    align-items: center; /* Alinhe a imagem verticalmente */
+    cursor: pointer;
+}
+
+.logo-image {
+  max-width: 70px;
+    margin-right: -5px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
+    margin-left: -15%;
+}
+
