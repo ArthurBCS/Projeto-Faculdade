@@ -383,6 +383,9 @@ font-size: 1.125em;
   text-decoration: underline;
 }
 
+.image-eniac {
+  width: 23.25em; /* Isso afetará o contêiner da imagem em todos os tamanhos de tela */
+}
 /* Opcional: Defina um tamanho mínimo para que a imagem nunca fique abaixo disso */
 .eniac {
   width: 21.25em; /* ou o tamanho max que você considera adequado */
