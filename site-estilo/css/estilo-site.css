@@ -381,8 +381,9 @@ font-size: 1.125em;
 
 /* Opcional: Defina um tamanho mínimo para que a imagem nunca fique abaixo disso */
 .eniac {
-  max-width: 340px; /* ou o tamanho max que você considera adequado */
-  margin-left: 1.3em;
+   width: 335px; /* ou o tamanho max que você considera adequado */
+  margin-left: 1.7em;
+
 }
 
 
