@@ -114,6 +114,10 @@ h1,h2,h3,h4,h5,h6{
   
   /* Responsividade */
   @media (max-width: 999px){
+        .image-eniac{
+    margin: -0.1em;
+    }
+
 
 
     .titulo-cabecalho-bootstrap .titulo {
