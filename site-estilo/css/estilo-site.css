@@ -378,7 +378,38 @@ font-size: 1.125em;
   cursor: pointer;
   text-decoration: underline;
 }
+
+/* Opcional: Defina um tamanho mínimo para que a imagem nunca fique abaixo disso */
+.eniac {
+  max-width: 350px; /* ou o tamanho mínimo que você considera adequado */
+  margin-left: 1.4em;
+}
+
+
+
 /* Segundo TxT */
+.texto-introducao{
+  margin-top: 60px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.texto-introducao h3{
+  font-size: 1.75em;
+  color: #000;
+  font-weight: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.texto-introducao p{
+  font-size: 1.125em;
+  color: #000;
+  margin: 20px;
+}
+
+
+/* Terceiro TxT */
 .titulo-cabecalho-bootstrap-1{
   margin-top: 60px;
   color: #000;
