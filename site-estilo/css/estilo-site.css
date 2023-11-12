@@ -114,17 +114,11 @@ h1,h2,h3,h4,h5,h6{
   
   /* Responsividade */
   @media (max-width: 999px){
-        .image-eniac{
-    margin: -0.1em;
-    }
-
-
-
     .titulo-cabecalho-bootstrap .titulo {
       font-size: 1.5625em;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
-      margin-left: -1.3em;
+      margin-left: -1.8em;
     }
     
     .titulo-cabecalho-bootstrap .texto {
@@ -164,8 +158,11 @@ h1,h2,h3,h4,h5,h6{
 }
   }
 
+
+  
+
 /* Responsividade para Iphone */
-@media (max-width: 393px) {
+@media (max-width: 402px) {
   .titulo-cabecalho-bootstrap .titulo{
     font-size: 1.375em;
     text-align: justify;
@@ -298,6 +295,35 @@ h1,h2,h3,h4,h5,h6{
 
 
 /* Site História computação*/
+
+.secao-babbage {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px; /* Adicione margem inferior conforme necessário */
+}
+
+.secao-babbage img {
+  height: 250px;
+  margin-right: 15px; /* Ajuste a margem entre a imagem e o texto conforme necessário */
+}
+
+.secao-babbage .texto {
+  flex: 1; /* Ocupar todo o espaço disponível */
+}
+
+.secao-babbage p {
+  margin-top: 0; /* Remover a margem superior padrão */
+}
+
+.secao-babbage strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+
+
+
 .cabecalho-historia-computacao{
     margin-top: 130px;
     transition: margin-top 0.3s; /* Adicione uma transição suave */
@@ -307,6 +333,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .cabecalho-historia-computacao p{
 font-size: 1.125em;
+margin: 1.2em;
 }
 
 /* Site História programação*/
@@ -319,6 +346,73 @@ font-size: 1.5625em;
 }
 .cabecalho-historia-programacao p{
 font-size: 1.125em;
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.secao{
+  display: flex;
+  width: 100%;
+}
+.secao img{
+  height: 250px;
+  margin-top: 1%;
+}
+.secao p{
+  margin-right: 15px;
+}
+.secao strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 999px){
+  .secao{
+    display: flex;
+    width: 100%;
+  }
+  .secao img{
+    height: 250px;
+    margin-top: 7%;
+  }
+  .secao p{
+    margin-right: 18px;
+  }
+
+  .secao-babbage {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px; /* Adicione margem inferior conforme necessário */
+  margin-top: 10%; /* Remover a margem superior padrão */
+}
+
+.secao-babbage img {
+  height: 250px;
+  margin-right: 18px; /* Ajuste a margem entre a imagem e o texto conforme necessário */
+}
+
+.secao-babbage .texto {
+  flex: 1; /* Ocupar todo o espaço disponível */
+}
+
+.secao-babbage p {
+  margin-top: 0; /* Remover a margem superior padrão */
+}
+
+.secao-babbage strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+}
+
+body{
+  margin: 0;
+  font-family: sans-serif;
 }
 
 /* Site Paradigmas*/
@@ -383,6 +477,7 @@ font-size: 1.125em;
   text-decoration: underline;
 }
 
+
 .image-eniac {
   width: 23.25em; /* Isso afetará o contêiner da imagem em todos os tamanhos de tela */
 }
@@ -392,7 +487,6 @@ font-size: 1.125em;
   margin: 1em auto; /* Adiciona 1em de margem no topo e na parte inferior, e automático dos lados */
   display: block;
 }
-
 
 
 
@@ -558,7 +652,7 @@ background-color: #fff;
 .swiper-pagination.bullet{
   background-color: #4070F4;
 }
-@media screen and(max-width:768px){
+@media screen and (max-width:768px){
   .slide-content{
     display: none;
   }
@@ -566,6 +660,48 @@ background-color: #fff;
     margin: 0 10px;
   }
 }
+@media (max-width: 768px) {
+  .secao {
+    flex-direction: column; /* exibe os elementos em coluna em telas menores */
+  }
+  .secao p{
+    margin: 1.2em;
+  }
+  
+  .secao img {
+    margin: auto; /* remove a margem direita na versão mobile */
+    max-width: 70%; /* Largura máxima para telas menores */
+    margin-top: 20px; /* Ajusta a margem superior na versão mobile */
+  }
+
+  .secao-babbage {
+    display: flex;
+    flex-direction: column; /* Mudar a direção para coluna em telas menores */
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 10%;
+  }
+  
+  .secao-babbage img {
+    height: 250px;
+    margin-bottom: 10px; /* Adicionar margem entre a imagem e o texto */
+  }
+  
+  .secao-babbage .texto {
+    flex: 1;
+    order: -1; /* Inverter a ordem dos elementos, colocando o título acima da imagem */
+  }
+  
+  .secao-babbage p {
+    margin-top: 0;
+  }
+  
+  .secao-babbage strong {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  }
 
 
 
