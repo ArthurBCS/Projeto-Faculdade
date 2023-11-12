@@ -652,7 +652,7 @@ background-color: #fff;
 .swiper-pagination.bullet{
   background-color: #4070F4;
 }
-@media screen and (max-width:768px){
+@media screen and(max-width:768px){
   .slide-content{
     display: none;
   }
