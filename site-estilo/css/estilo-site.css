@@ -294,8 +294,8 @@ h1,h2,h3,h4,h5,h6{
 
 
 
-/* Site História computação*/
 
+/* Site História programação*/
 .secao-babbage {
   display: flex;
   align-items: center;
@@ -320,31 +320,39 @@ h1,h2,h3,h4,h5,h6{
   font-size: 1.5em;
   margin-bottom: 10px;
 }
+a:hover {
+  color: blue;
+}
+a {
+  color: blue;
+  /* Adicione mais estilos conforme necessário */
+}
 
 
 
 
-.cabecalho-historia-computacao{
+
+.cabecalho-historia-programacao{
     margin-top: 130px;
     transition: margin-top 0.3s; /* Adicione uma transição suave */
 }
-.cabecalho-historia-computacao h2{
+.cabecalho-historia-programacao h2{
   font-size: 1.5625em;
 }
-.cabecalho-historia-computacao p{
+.cabecalho-historia-programacao p{
 font-size: 1.125em;
 margin: 1.2em;
 }
 
-/* Site História programação*/
-.cabecalho-historia-programacao{
+/* Site História computação*/
+.cabecalho-historia-computacao{
   margin-top: 130px;
   transition: margin-top 0.3s; /* Adicione uma transição suave */
 }
-.cabecalho-historia-programacao h2{
+.cabecalho-historia-computacao h2{
 font-size: 1.5625em;
 }
-.cabecalho-historia-programacao p{
+.cabecalho-historia-computacao p{
 font-size: 1.125em;
 }
 
@@ -715,7 +723,7 @@ background-color: #fff;
   margin-top: 110px;
   background-color: #333; /* Cor de fundo do rodapé */
   color: #fff; /* Cor do texto do rodapé */
-  padding: 48px 0; /* Espaçamento interno para o conteúdo do rodapé */
+  padding: 20px 0; /* Espaçamento interno para o conteúdo do rodapé */
   width: 100%; /* Ocupa toda a largura disponível */
   position: absolute; /* Posição absoluta para ignorar limitações dos elementos pai */
   left: 0; /* Alinhar o rodapé à margem esquerda */
