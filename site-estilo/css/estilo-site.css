@@ -491,8 +491,8 @@ font-size: 1.125em;
   text-align: justify;
 }
 
-.titulo-cabecalho-bootstrap p {
-  margin-top: 30px;
+.titulo-cabecalho-bootstrap .texto {
+  margin-top: 10px;
   font-size: 1.125em;
   color: #fff;
   text-align: left;
@@ -702,7 +702,7 @@ background-color: #fff;
     flex-direction: column; /* exibe os elementos em coluna em telas menores */
   }
   .secao p{
-    margin: 1.2em;
+    margin: 0.5em;
   }
   
   .secao img {
@@ -737,6 +737,11 @@ background-color: #fff;
   .secao-babbage strong {
     font-size: 1.2em;
     margin-bottom: 10px;
+  }
+
+  .titulo-cabecalho-bootstrap .texto{
+    margin-top: -20px;
+    margin-left: -60px;
   }
   }
 
