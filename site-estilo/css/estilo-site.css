@@ -296,6 +296,55 @@ h1,h2,h3,h4,h5,h6{
 
 
 /* Site História programação*/
+
+
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.secao{
+  display: flex;
+  width: 100%;
+}
+.secao img{
+  height: 250px;
+  margin-top: 13%;
+  border-radius: 70px;
+}
+.secao p{
+  margin-right: 15px;
+}
+.secao strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+#card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+#card.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.texto {
+  padding: 20px;
+}
+
+img {
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .secao-babbage {
   display: flex;
   align-items: center;
@@ -306,6 +355,7 @@ h1,h2,h3,h4,h5,h6{
 .secao-babbage img {
   height: 250px;
   margin-right: 15px; /* Ajuste a margem entre a imagem e o texto conforme necessário */
+  border-radius: 70px;
 }
 
 .secao-babbage .texto {
@@ -354,27 +404,6 @@ font-size: 1.5625em;
 }
 .cabecalho-historia-computacao p{
 font-size: 1.125em;
-}
-
-body{
-  margin: 0;
-  font-family: sans-serif;
-}
-
-.secao{
-  display: flex;
-  width: 100%;
-}
-.secao img{
-  height: 250px;
-  margin-top: 1%;
-}
-.secao p{
-  margin-right: 15px;
-}
-.secao strong {
-  font-size: 1.5em;
-  margin-bottom: 10px;
 }
 
 @media (max-width: 999px){
@@ -706,7 +735,7 @@ background-color: #fff;
   }
   
   .secao-babbage strong {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-bottom: 10px;
   }
   }
