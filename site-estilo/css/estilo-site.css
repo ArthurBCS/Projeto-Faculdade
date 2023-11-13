@@ -164,10 +164,10 @@ h1,h2,h3,h4,h5,h6{
 /* Responsividade para Iphone */
 @media (max-width: 402px) {
   .titulo-cabecalho-bootstrap .titulo{
-    font-size: 1.375em;
+    font-size: 1.215em;
     text-align: justify;
     font-family: Arial, sans-serif;
-    margin-left: -1.3em;
+    margin-left: -2.4em;
   }
 
   .titulo-cabecalho-bootstrap .texto{
@@ -804,4 +804,5 @@ margin-bottom: 10px; /* Espaçamento inferior abaixo do título */
     margin-right: -5px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
     margin-left: -15%;
 }
+
 
