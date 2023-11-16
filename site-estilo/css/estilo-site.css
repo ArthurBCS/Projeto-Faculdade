@@ -381,7 +381,7 @@ a {
 
 
 
-
+/* Site História programação*/
 .cabecalho-historia-programacao{
     margin-top: 130px;
     transition: margin-top 0.3s; /* Adicione uma transição suave */
@@ -395,11 +395,102 @@ margin: 1.2em;
 }
 
 /* Site História computação*/
+
+.image-computador-eniac {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.computador-eniac {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.image-colossus {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colossus {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.image-cartao {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cartao {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+
+.image-telegrafo {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.telegrafo {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.image-maquina {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.maquina {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.image-abaco {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.abaco {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
 .cabecalho-historia-computacao{
   margin-top: 130px;
   transition: margin-top 0.3s; /* Adicione uma transição suave */
 }
-.cabecalho-historia-computacao h2{
+.cabecalho-historia-computacao h3{
 font-size: 1.5625em;
 }
 .cabecalho-historia-computacao p{
@@ -767,17 +858,28 @@ background-color: #fff;
 .rodape a {
   color: #fff; /* Cor dos links no rodapé */
   text-decoration: none; /* Remover sublinhado dos links */
+  transition: all 0.3s; /* Adicionar transição de 0.3 segundos */
 }
 
 /* Estilização para os links no rodapé no hover (ao passar o mouse) */
 .rodape a:hover {
-text-decoration: underline; /* Adicionar sublinhado no hover dos links */
+  text-decoration: none; /* Adicionar sublinhado no hover dos links */
 }
 
+
 /* Estilização para a seção "Links Úteis" */
-.rodape h4 {
-font-size: 18px; /* Tamanho da fonte do título "Links Úteis" */
-margin-bottom: 10px; /* Espaçamento inferior abaixo do título */
+.rodape .col-md-6 ul {
+  list-style: none; /* Remover marcadores de lista (bolinhas) */
+  padding: 0; /* Remover preenchimento padrão das listas */
+}
+
+.rodape .col-md-6 ul li {
+  margin-bottom: 8px; /* Espaçamento inferior entre os itens da lista */
+}
+
+.rodape .col-md-6 ul li a {
+  color: #fff; /* Cor dos links no rodapé */
+  text-decoration: none; /* Remover sublinhado dos links */
 }
 
 /* Estilização para a seção "Contato" */
@@ -785,24 +887,35 @@ margin-bottom: 10px; /* Espaçamento inferior abaixo do título */
   font-size: 17px; /* Tamanho da fonte para informações de contato */
   color: #fff;
 }
+
 .highlighted-text {
   font-size: 24px; /* Tamanho desejado */
   font-weight: bold; /* Peso da fonte desejado, se necessário */
   /* Outros estilos, como cor, fundo, etc. */
 }
+
 .contact-info {
-  text-align: right; /* Alinhe o conteúdo à esquerda */
-}
-.logo {
-    display: flex;
-    align-items: center; /* Alinhe a imagem verticalmente */
-    cursor: pointer;
+  text-align: right; /* Alinhe o conteúdo à direita */
 }
 
+.logo {
+  display: flex;
+  align-items: center; /* Alinhe a imagem verticalmente */
+  cursor: pointer;
+}
+
+/* Estilização para os direitos autorais */
+.direitos-autorais {
+  text-align: center; /* Centralizar o texto */
+  font-size: 14px; /* Tamanho da fonte desejado */
+  color: #fff; /* Cor do texto */
+  margin-top: 10px; /* Espaçamento superior, se necessário */
+}
+
+
+/* Logotipo */
 .logo-image {
   max-width: 70px;
     margin-right: -5px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
     margin-left: -15%;
 }
-
-
