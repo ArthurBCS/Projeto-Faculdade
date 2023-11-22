@@ -54,98 +54,271 @@
 
   <script>
 
-function closeMenu() {
-  const navMenu = document.querySelector('.custom-nav-menu'); // Use a classe correta do seu menu aqui
-  const hamburgerIcon = document.querySelector('.hamburger-icon');
-  const closeIcon = document.querySelector('.close-icon');
-  const header = document.querySelector('.cabecalho-paradigmas');
+    function closeMenu() {
+      const navMenu = document.querySelector('.custom-nav-menu'); // Use a classe correta do seu menu aqui
+      const hamburgerIcon = document.querySelector('.hamburger-icon');
+      const closeIcon = document.querySelector('.close-icon');
+      const header = document.querySelector('.cabecalho-paradigmas');
+    
+      if (navMenu.classList.contains('show-menu')) {
+        navMenu.classList.remove('show-menu'); // Fecha o menu
+    
+        // Atualiza a exibição dos ícones
+        hamburgerIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    
+        // Reajusta a margem do cabeçalho
+        header.style.marginTop = '150px'; // Ajuste este valor conforme necessário
+      }
+    }
+    
+    // Evento de redimensionamento da janela
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+        // Chame closeMenu() ao redimensionar se necessário
+        closeMenu();
+      }
+    });
+    
+    // Evento de rolagem
+    window.addEventListener('scroll', function () {
+      // Chame closeMenu() ao rolar
+      closeMenu();
+    });
+    
+    function toggleMenu() {
+      const navMenu = document.querySelector('.custom-nav-menu');
+      const header = document.querySelector('.cabecalho-paradigmas');
+      const hamburgerIcon = document.querySelector('.hamburger-icon');
+      const closeIcon = document.querySelector('.close-icon');
+    
+      // Verifique se a classe 'show-menu' está presente no menu
+      if (navMenu.classList.contains('show-menu')) {
+        // Se o menu estiver aberto, remova a margem superior e esconda o ícone "X"
+        header.style.marginTop = '150px';
+        closeIcon.style.display = 'none';
+        hamburgerIcon.style.display = 'block';
+      } else {
+        // Se o menu estiver fechado, adicione a margem superior e mostre o ícone "X"
+        header.style.marginTop = '400px';
+        closeIcon.style.display = 'block';
+        hamburgerIcon.style.display = 'none';
+      }
+      
+      // Adicione ou remova a classe 'show-menu' no menu
+      navMenu.classList.toggle('show-menu');
+    }
+    
+    
+    // Adicione um evento de redimensionamento da janela
+    window.addEventListener('resize', function () {
+      const navMenu = document.querySelector('.custom-nav-menu');
+      const header = document.querySelector('.cabecalho-paradigmas');
+      if (window.innerWidth > 768) {
+        // Se a largura da tela for maior que 768px, feche o menu e redefina a margem superior
+        header.style.marginTop = '150px';
+        navMenu.classList.remove('show-menu');
+      }
+    });
+    
+    window.addEventListener('scroll', function () {
+      const navMenu = document.querySelector('.nav-menu');
+      if (window.scrollY > 150) {
+        navMenu.classList.add('recolhida');
+      } else {
+        navMenu.classList.remove('recolhida');
+      }
+    });
+    
+    </script>
 
-  if (navMenu.classList.contains('show-menu')) {
-    navMenu.classList.remove('show-menu'); // Fecha o menu
 
-    // Atualiza a exibição dos ícones
-    hamburgerIcon.style.display = 'block';
-    closeIcon.style.display = 'none';
-
-    // Reajusta a margem do cabeçalho
-    header.style.marginTop = '150px'; // Ajuste este valor conforme necessário
-  }
-}
-
-// Evento de redimensionamento da janela
-window.addEventListener('resize', function () {
-  if (window.innerWidth > 768) {
-    // Chame closeMenu() ao redimensionar se necessário
-    closeMenu();
-  }
-});
-
-// Evento de rolagem
-window.addEventListener('scroll', function () {
-  // Chame closeMenu() ao rolar
-  closeMenu();
-});
-
-function toggleMenu() {
-  const navMenu = document.querySelector('.custom-nav-menu');
-  const header = document.querySelector('.cabecalho-paradigmas');
-  const hamburgerIcon = document.querySelector('.hamburger-icon');
-  const closeIcon = document.querySelector('.close-icon');
-
-  // Verifique se a classe 'show-menu' está presente no menu
-  if (navMenu.classList.contains('show-menu')) {
-    // Se o menu estiver aberto, remova a margem superior e esconda o ícone "X"
-    header.style.marginTop = '150px';
-    closeIcon.style.display = 'none';
-    hamburgerIcon.style.display = 'block';
-  } else {
-    // Se o menu estiver fechado, adicione a margem superior e mostre o ícone "X"
-    header.style.marginTop = '400px';
-    closeIcon.style.display = 'block';
-    hamburgerIcon.style.display = 'none';
-  }
+<body>
+<div class="container cabecalho-paradigmas">
+  <h3><strong>Paradigmas de Programação: A Arte e a Ciência por Trás do Código</strong></h3>
+  <br>
+  <p>Os primeiros paradigmas de programação surgiram ainda entre as décadas de 50 e 60, em uma época onde a capacidade computacional era baixa, e a complexidade para passar instruções ao computador era alta. Os iniciais foram os de programação imperativa e declarativa, tratados na época apenas como “abordagens de programação” e só na década de 70 foram denominados como paradigmas. Outros surgiram ao longo do tempo como evoluções para a forma de programar, sendo eles derivados dos dois iniciais. Atualmente há muitos paradigmas, sendo alguns mais antigos e já não tão utilizados e outros ainda recentes e pouco conhecidos. Dentre os vários existentes pode-se citar: Estruturado, Procedural, Orientado a Objeto, Orientado a Eventos, Orientado a aspectos, Concorrente, Distribuído, Funcional, Lógico, Matemático e Reativo.</p>
   
-  // Adicione ou remova a classe 'show-menu' no menu
-  navMenu.classList.toggle('show-menu');
-}
+  <p>Confira abaixo mais informações sobre alguns dos paradigmas de programação.</p>
+    
+  <p></p>
+  <br>
+
+   <h3><strong>Paradigma Imperativo</strong></h3>
+    <br>
+      <p><strong>Conceito:</strong> O paradigma imperativo é um estilo de programação que se concentra na descrição detalhada de como uma tarefa deve ser realizada, ou seja, ele se concentra nos procedimentos e comandos específicos que um programa deve executar. É um dos paradigmas mais antigos da programação e é amplamente utilizado em linguagens de programação como C, C++, Java e Python.</p>
+
+      <p><strong>Origem</strong> O paradigma imperativo, que é um dos paradigmas mais antigos da programação, não foi "inventado" por uma única pessoa, mas evoluiu ao longo do tempo à medida que os primeiros computadores e linguagens de programação foram desenvolvidos.</p>
+        
+      <p>No início da computação, os programadores interagiam diretamente com hardware usando linguagens de baixo nível, como a linguagem de máquina e assembly. Nessas linguagens, a programação era essencialmente imperativa, com comandos específicos para manipular o fluxo de controle e os dados na memória do computador.
+      </p>
+
+      <div class="image-abaco">
+        <img src="img-conteudos/Jhon von Neuman.png" class="abaco">
+    </div>
+
+      <p>No entanto, nomes como John von Neumann, Alan Turing, John Presper Eckert e John Mauchly, entre outros, desempenharam papéis importantes no desenvolvimento dos fundamentos da computação e na criação dos primeiros computadores programáveis. John von Neumann, em particular, é conhecido por sua arquitetura de computador, que estabeleceu a estrutura fundamental dos computadores modernos e influenciou a forma como os programas são executados, dando origem a muitos princípios da programação imperativa. </p>
+
+      <p>Portanto, o paradigma imperativo não tem um único inventor, mas é resultado da evolução da programação e da computação ao longo de várias décadas, com contribuições significativas de várias pessoas e avanços tecnológicos. </p>
 
 
-// Adicione um evento de redimensionamento da janela
-window.addEventListener('resize', function () {
-  const navMenu = document.querySelector('.custom-nav-menu');
-  const header = document.querySelector('.cabecalho-paradigmas');
-  if (window.innerWidth > 768) {
-    // Se a largura da tela for maior que 768px, feche o menu e redefina a margem superior
-    header.style.marginTop = '150px';
-    navMenu.classList.remove('show-menu');
-  }
-});
+      <h3><strong>Paradigma Declarativo</strong></h3>
+    <br>
+      <p><strong>Conceito:</strong> O paradigma declarativo na programação é uma abordagem que se concentra em descrever o que deve ser feito, em oposição a como deve ser feito. Em outras palavras, os programas escritos no paradigma declarativo descrevem as relações, propriedades e restrições de um problema, permitindo que o sistema determine a melhor maneira de alcançar o resultado desejado.</p>
 
-window.addEventListener('scroll', function () {
-  const navMenu = document.querySelector('.nav-menu');
-  if (window.scrollY > 150) {
-    navMenu.classList.add('recolhida');
-  } else {
-    navMenu.classList.remove('recolhida');
-  }
-});
+      <p><strong>Origem</strong> O paradigma declarativo, assim como o paradigma imperativo, não tem um único inventor, pois não se originou de uma única pessoa ou evento específico. Em vez disso, ele evoluiu gradualmente ao longo do tempo, com contribuições de várias áreas da computação e matemática.</p>
+        
+      <p>Alguns dos momentos e influências-chave que contribuíram para o desenvolvimento do paradigma declarativo incluem:
+      </p>
 
+      <p><strong>1.</strong>	Linguagens de Consulta a Bancos de Dados: O uso de linguagens de consulta declarativas, como SQL, na década de 1970, desempenhou um papel importante na popularização da abordagem declarativa em sistemas de gerenciamento de bancos de dados.
+      </p>      
 
+      <p><strong>2.</strong>	Programação Lógica e Prolog: O desenvolvimento da linguagem de programação Prolog na década de 1970, que se baseia na lógica de primeira ordem e na inferência lógica, foi um marco na promoção do paradigma declarativo.</p>      
 
+      <p><strong>3.</strong>	Programação Funcional: Linguagens de programação funcionais, como Lisp, que também têm elementos declarativos, influenciaram a abordagem declarativa.
+      </p>     
 
+      <p><strong>4.</strong>	Linguagens de Marcação: Linguagens de marcação, como HTML e XML, adotam uma abordagem declarativa para descrever a estrutura de documentos.
+      </p>
 
+      <p><strong>5.</strong>	Linguagens de Transformação de Dados: Linguagens de transformação de dados, como XSLT, foram desenvolvidas para transformar dados de forma declarativa.
+      </p> 
 
 
+      <p>paradigma declarativo é resultado de uma evolução natural na forma como os programadores e cientistas da computação abordam a resolução de problemas e a descrição de processos. Não é atribuído a um único indivíduo ou evento específico, mas sim ao desenvolvimento progressivo de conceitos e abordagens ao longo do tempo, à medida que a computação e a teoria da programação avançavam.</p> 
 
-  </script>
 
-      <div class="container cabecalho-paradigmas">
-        <h2><strong>História e Evolução dos Paradigmas</strong></h2>
-        <br>
-            <p><strong>História e Evolução dos Paradigmas</strong>
+      <h3><strong>Paradigma Orientado a Objetos</strong></h3>
+      <br>
 
-              <p></p>
+      <p>Aqui estão os principais conceitos do paradigma orientado a objetos:</p>
 
+      <p><strong>Objeto:</strong> Um objeto é uma instância de uma classe. Ele possui atributos que armazenam dados e métodos que definem seu comportamento. Os objetos são as unidades fundamentais no paradigma orientado a objetos e podem ser usados para representar entidades reais ou abstratas. </p>
+
+      <p><strong>Classe:</strong> Uma classe é um modelo ou plano para a criação de objetos. Ela define a estrutura (atributos) e o comportamento (métodos) que os objetos daquela classe terão. As classes servem como "receitas" para criar objetos.</p>
+
+      <p><strong>Encapsulamento:</strong> O encapsulamento é um conceito que agrupa os atributos e métodos relacionados a um objeto em uma única unidade (a classe) e controla o acesso a essas informações. Isso ajuda a proteger os dados e a garantir que eles sejam manipulados de maneira consistente.</p>
+
+      <p><strong>Herança:</strong> A herança permite que uma classe herde atributos e métodos de outra classe (superclasse ou classe pai). Isso promove a reutilização de código e a criação de hierarquias de classes.</p>
+
+      <p><strong>Abstração:</strong> A abstração envolve a simplificação de objetos e sistemas complexos, destacando apenas os detalhes mais importantes. Isso permite que os programadores se concentrem nos aspectos relevantes e ignorem os detalhes desnecessários. </p>
+
+      <p><strong>Mensagem:</strong> No paradigma orientado a objetos, a interação entre objetos ocorre por meio da troca de mensagens. Os objetos se comunicam chamando métodos uns nos outros. </p>
+        
+      <p><strong>Origem: </strong> O paradigma orientado a objetos (POO) teve sua origem em várias influências ao longo do tempo, mas uma de suas origens mais notáveis é o trabalho de Ole-Johan Dahl e Kristen Nygaard, dois cientistas da computação noruegueses. Eles desenvolveram o conceito de programação orientada a objetos e criaram a linguagem de programação Simula na década de 1960, que é frequentemente creditada como a primeira linguagem de programação a adotar plenamente o paradigma orientado a objetos.
+      </p>
+
+      <div class="image-abaco">
+        <img src="img-conteudos/Ole-Johan Dahl e Kristen.png" class="abaco">
+    </div>
+
+      <p><strong>Alguns marcos na origem do paradigma orientado a objetos incluem:</strong></p>
+
+    <br>
+      <p><strong>1.</strong>	Simula e a Primeira Aplicação de POO: Ole-Johan Dahl e Kristen Nygaard desenvolveram a linguagem Simula na década de 1960 para modelar sistemas de simulação. Simula introduziu conceitos fundamentais da programação orientada a objetos, como classes, objetos, herança e polimorfismo. O foco estava em criar modelos que refletissem o mundo real de uma forma mais natural e modular.      </p>
+
+      <p><strong>2.</strong>	Smalltalk: Outro ponto importante na história do POO foi o desenvolvimento da linguagem de programação Smalltalk na Xerox PARC (Palo Alto Research Center) na década de 1970. Smalltalk é frequentemente creditado por popularizar o paradigma orientado a objetos e introduziu a ideia de um ambiente de programação completo baseado em objetos.      </p>
+
+      <p><strong>3.</strong>	C++ e Object-Oriented Programming: A linguagem de programação C++ foi desenvolvida por Bjarne Stroustrup na década de 1980. Ela estendeu a linguagem de programação C com recursos orientados a objetos, como classes e herança. C++ desempenhou um papel importante na popularização do POO e é usado em uma ampla variedade de aplicações.
+
+      <p><strong>4.</strong>	Java: Java, desenvolvida pela Sun Microsystems (agora parte da Oracle), surgiu na década de 1990 e teve um grande impacto na programação orientada a objetos. Sua ênfase na portabilidade e segurança ajudou a popularizar o POO como uma abordagem de desenvolvimento de software.</p>
+
+
+      <p>O paradigma orientado a objetos se tornou amplamente aceito e é usado em muitas linguagens de programação, incluindo Java, C++, Python, C#, Ruby e muitas outras. Ele oferece uma maneira eficaz de organizar e modelar sistemas de software, permitindo a reutilização de código, abstração, encapsulamento e modularidade. A origem do POO é uma combinação de trabalho pioneiro de vários pesquisadores e a evolução ao longo das décadas na computação e na programação de software.</p>
+
+        
+
+      <h3><strong>Paradigma Lógico</strong></h3>
+      <br>
+
+      <p><strong>Conceito:</strong> O paradigma lógico refere-se a uma abordagem particular de programação que se baseia na lógica formal e na dedução. O paradigma lógico na computação é caracterizado pelo uso de linguagens de programação lógica, sendo a Prolog uma das linguagens mais conhecidas nesse contexto. As linguagens de programação lógica permitem que os programadores expressem relações e regras lógicas para resolver problemas.</p>
+
+      <p>Principais características do paradigma lógico na computação:</p>
+
+      <p><strong>Classe:</strong> Uma classe é um modelo ou plano para a criação de objetos. Ela define a estrutura (atributos) e o comportamento (métodos) que os objetos daquela classe terão. As classes servem como "receitas" para criar objetos.</p>
+
+      <p><strong>Encapsulamento:</strong> O encapsulamento é um conceito que agrupa os atributos e métodos relacionados a um objeto em uma única unidade (a classe) e controla o acesso a essas informações. Isso ajuda a proteger os dados e a garantir que eles sejam manipulados de maneira consistente.</p>
+
+      <p><strong>Herança:</strong> A herança permite que uma classe herde atributos e métodos de outra classe (superclasse ou classe pai). Isso promove a reutilização de código e a criação de hierarquias de classes.</p>
+
+      <p><strong>Abstração:</strong> A abstração envolve a simplificação de objetos e sistemas complexos, destacando apenas os detalhes mais importantes. Isso permite que os programadores se concentrem nos aspectos relevantes e ignorem os detalhes desnecessários. </p>
+
+      <p><strong>Mensagem:</strong> No paradigma orientado a objetos, a interação entre objetos ocorre por meio da troca de mensagens. Os objetos se comunicam chamando métodos uns nos outros. </p>
+        
+      <p><strong>Origem: </strong> O paradigma orientado a objetos (POO) teve sua origem em várias influências ao longo do tempo, mas uma de suas origens mais notáveis é o trabalho de Ole-Johan Dahl e Kristen Nygaard, dois cientistas da computação noruegueses. Eles desenvolveram o conceito de programação orientada a objetos e criaram a linguagem de programação Simula na década de 1960, que é frequentemente creditada como a primeira linguagem de programação a adotar plenamente o paradigma orientado a objetos.
+      </p>
+
+      <p><strong>Alguns marcos na origem do paradigma orientado a objetos incluem:</strong></p>
+
+      <br>
+      <p><strong>1. Lógica Declarativa: </strong>O paradigma lógico é declarativo, o que significa que os programadores especificam o que deve ser feito, em vez de dizer como fazer. Eles descrevem as relações lógicas e as regras, e o mecanismo de inferência da linguagem lógica deduz como chegar aos resultados desejados. </p>
+
+      <p><strong>2. Baseado em Regras e Relações: </strong>As linguagens de programação lógica permitem definir regras lógicas e relações entre objetos. Isso é feito por meio de cláusulas e predicados que descrevem as conexões entre os dados. </p>
+
+      <p><strong>3.	Mecanismo de Inferência: </strong>O mecanismo de inferência é uma parte fundamental das linguagens lógicas. Ele é responsável por deduzir respostas a partir das regras e relações declaradas. Os sistemas de lógica, como Prolog, usam a resolução lógica para encontrar soluções para consultas.</p>
+
+      <p><strong>4.	Recursão:</strong>	A recursão é uma técnica frequentemente usada em programação lógica. Ela permite que os programas expressem soluções repetitivas e recursivas de maneira elegante e eficaz.</p>
+
+      <p><strong>5. Programação Declarativa: </strong>	No paradigma lógico, o programador descreve as relações e as restrições do problema, permitindo que o sistema deduza as soluções automaticamente. Isso é oposto à programação imperativa, onde os programadores dão instruções detalhadas sobre como executar um algoritmo.</p>
+
+      <p><strong>6. Utilização em IA e Processamento de Linguagem Natural: </strong>	O paradigma lógico é amplamente usado em aplicações de Inteligência Artificial (IA) e Processamento de Linguagem Natural (PLN) devido à sua capacidade de representar e raciocinar sobre conhecimento de forma lógica.</p>
+
+      <p><strong>7.	Limitações:</strong>	Embora seja eficaz em determinados domínios, o paradigma lógico pode ser menos eficiente do que outros paradigmas em alguns tipos de problemas, devido ao seu foco na busca por soluções lógicas.</p>
+
+      <p>Em resumo, o paradigma lógico na computação é uma abordagem de programação que se concentra na representação de relações lógicas e regras, permitindo que o sistema deduza soluções a partir dessas informações. Isso é particularmente útil em domínios onde o raciocínio lógico desempenha um papel fundamental, como a resolução de problemas em Inteligência Artificial, sistemas especialistas e Processamento de Linguagem Natural.</p>
+
+      <p><strong>Origem:</strong> O paradigma lógico na computação tem suas raízes na lógica matemática e filosofia, especialmente na lógica formal desenvolvida no início do século XX. A origem desse paradigma está associada a vários eventos e contribuições importantes:</p>
+
+      <div class="image-abaco">
+        <img src="img-conteudos/Gottlob Frege.png" class="abaco">
+      </div>
+
+      <p><strong>1. Cálculo Proposicional e Cálculo de Primeira Ordem:  </strong> No início do século XX, lógicos como Gottlob Frege, Bertrand Russell e Alfred North Whitehead desenvolveram o cálculo proposicional e o cálculo de primeira ordem (também conhecido como lógica de primeira ordem). Esses sistemas lógicos forneceram as bases para a representação formal de relações lógicas e a dedução de teoremas. </p>
+
+      <p><strong>2.	Lógica Matemática:  </strong>Lógicos como Kurt Gödel, Alonzo Church e Alan Turing fizeram contribuições significativas para a lógica matemática e a teoria da computação. Gödel é famoso por seu teorema da incompletude, Church desenvolveu o cálculo lambda (um formalismo central na programação funcional), e Turing projetou a Máquina de Turing, um modelo fundamental para a computação. </p>
+
+      <p><strong>3.	Desenvolvimento da Linguagem Prolog: </strong> A linguagem de programação lógica Prolog (Programming in Logic) foi desenvolvida na década de 1970 por Alain Colmerauer e Robert Kowalski na Universidade de Marselha. Prolog se tornou uma das linguagens mais conhecidas no paradigma lógico e é amplamente usada para resolver problemas de inteligência artificial e processamento de linguagem natural.</p>
+
+      <p><strong>4.	Crescimento da Inteligência Artificial (IA): </strong>	O paradigma lógico ganhou destaque em problemas de IA devido à sua capacidade de representar conhecimento de forma lógica e raciocinar sobre ele. Isso levou a uma maior adoção de linguagens lógicas, como Prolog, em aplicações de IA e sistemas especialistas.</p>
+
+      <p>Em essência, o paradigma lógico na computação é uma evolução das fundações da lógica matemática e da filosofia, aplicadas à resolução de problemas computacionais. Ele fornece uma maneira declarativa de representar conhecimento e regras, com o objetivo de permitir que os computadores deduzam soluções automaticamente. Esse paradigma se baseia em sólidas bases teóricas e tem sido influente em diversos campos, como IA, processamento de linguagem natural e sistemas de banco de dados dedutivo.</p>
+
+
+      <h3><strong>Paradigma Funcional</strong></h3>
+      <br>
+
+      <p><strong>Conceito:</strong>O paradigma funcional é um estilo de programação que se concentra na avaliação de funções matemáticas e na aplicação de conceitos da teoria das funções em programação de computadores. Nesse paradigma, os programas são estruturados em torno de funções que são tratadas como cidadãs de primeira classe, o que significa que podem ser passadas como argumentos para outras funções, retornadas como valores de outras funções e armazenadas em estruturas de dados. Aqui estão alguns conceitos-chave relacionados ao paradigma funcional:</p>
+
+     
+      <p><strong>1. Funções Pura:   </strong> No paradigma funcional, as funções são consideradas puras, o que significa que a saída de uma função depende apenas de suas entradas e não causa efeitos colaterais. Isso resulta em programas mais previsíveis e mais fáceis de depurar.</p>
+
+      <p><strong>2.	 Imutabilidade:  </strong>Em programação funcional, os dados são geralmente imutáveis, o que significa que, uma vez criados, não podem ser alterados. Em vez disso, as funções criam novas estruturas de dados a partir das existentes. Isso ajuda a evitar problemas de concorrência e facilita o rastreamento de bugs. </p>
+
+      <p><strong>3.	Recursão: </strong> A recursão é uma técnica comum no paradigma funcional, em que as funções chamam a si mesmas para realizar operações repetitivas. Isso elimina a necessidade de loops e iterações explícitas.</p>
+
+      <p><strong>4.	Expressões Lambda: </strong> As expressões lambda são funções anônimas que podem ser usadas para criar funções de curta duração sem a necessidade de definições formais. Elas são frequentemente usadas em conjunto com funções de ordem superior.</p>
+
+      <p>Linguagens de programação funcionais notáveis incluem Haskell, Lisp, Erlang, Clojure e Scala. Embora o paradigma funcional seja especialmente adequado para certos tipos de problemas, ele pode ser usado em conjunto com outros paradigmas, como o paradigma orientado a objetos, para criar soluções mais abrangentes e flexíveis.</p>
+
+      <p><strong>Origem: </strong>A origem do paradigma funcional na programação remonta às raízes da teoria das funções matemáticas e à linguagem de programação LISP (LISt Processing) que foi desenvolvida por John McCarthy nos anos 1950. A LISP é uma das primeiras linguagens de programação a incorporar fortemente os conceitos do paradigma funcional. No entanto, as influências filosóficas e matemáticas que deram origem ao paradigma funcional são mais antigas e profundas. Aqui estão alguns marcos importantes na origem do paradigma funcional: </p>
+
+        <div class="image-abaco">
+          <img src="img-conteudos/John McCarthy.png" class="abaco">
+        </div>
+
+
+
+        <p><strong>1.Cálculo Lambda:</strong> O cálculo lambda, desenvolvido por Alonzo Church na década de 1930, é uma notação formal que descreve a computação em termos de funções matemáticas. Esse formalismo teve uma influência fundamental no desenvolvimento do paradigma funcional.</p>
+
+        <p><strong>2.	LISP (1950s):</strong> John McCarthy desenvolveu a linguagem de programação LISP na década de 1950 na Universidade de Massachusetts. A LISP é uma das primeiras linguagens a adotar o paradigma funcional e foi projetada especificamente para manipular listas e árvores de forma recursiva, o que se alinha com os princípios do paradigma funcional.</p>
+
+        <p><strong>3.	ALGOL (1950s):</strong> Embora a LISP tenha sido pioneira no paradigma funcional, a linguagem de programação ALGOL, desenvolvida na mesma época, teve uma influência significativa na evolução das linguagens de programação. ALGOL introduziu a noção de blocos aninhados e funções como cidadãs de primeira classe, que são características importantes do paradigma funcional.</p>
+
+        <p><strong>4.	Teoria das Funções Matemáticas:</strong>O paradigma funcional tem suas raízes na teoria das funções matemáticas e na lógica formal, que têm uma longa história na matemática e filosofia.</p>
+
+        <p><strong>5.	Desenvolvimento Contínuo:</strong> Desde esses primeiros desenvolvimentos, o paradigma funcional evoluiu e se expandiu para incluir várias linguagens de programação modernas, como Haskell, Erlang, Clojure e Scala, que incorporam conceitos e práticas do paradigma funcional.</p>
+    </div>
 
 
 
