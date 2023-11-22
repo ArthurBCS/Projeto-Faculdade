@@ -1,32 +1,40 @@
 /* Código CSS */
+
+/* Reset de Estilos Padrão do Navegador */
 html {
   scroll-behavior: smooth;
 }
 
-/* Código Básico */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;&display=swap');
-.hamburger-menu {
-  display: none;
-}
-body{
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Estilos Básicos */
+body {
   font-family: "Open sans", sans-serif;
   color: #000000;
 }
-a{
+
+a {
   color: #5c9f24;
 }
+
 a:hover {
   color: #74c92d;
   text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6{
+
+/* Estilos de Títulos */
+h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
-#header{
+
+/* Estilos do Cabeçalho */
+#header {
   background: #000000;
   padding: 15px;
 }
-#header .logo{
+
+#header .logo {
   font-size: 25px;
   margin: 0;
   padding: 0;
@@ -35,27 +43,39 @@ h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
   white-space: nowrap;
 }
-#header .logo a{
+
+#header .logo a {
   color: #fff;
 }
-#header .logo a:hover{
+
+#header .logo a:hover {
   color: #4070F4;
 }
-  /* Menu de Navegação */
-.nav-menu ul{
+
+/* Estilos do Menu Hambúrguer */
+.hamburger-menu {
+  display: none;
+}
+
+/* Menu de Navegação */
+.nav-menu ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.nav-menu > ul{
+
+.nav-menu > ul {
   display: flex;
 }
-.nav-menu > ul > li{
+
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 22px;
 }
-.nav-menu a{
+
+/* Estilo para links no menu */
+.nav-menu a {
   display: block;
   position: relative;
   color: rgba(255, 255, 255, 0.7);
@@ -65,8 +85,10 @@ h1,h2,h3,h4,h5,h6{
   font-family: "Roboto", sans-serif;
   padding: 0 4px;
   text-transform: uppercase;
-  }
-  .nav-menu > ul > li a::before{
+}
+
+/* Linha animada sob os links */
+.nav-menu > ul > li a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -76,115 +98,65 @@ h1,h2,h3,h4,h5,h6{
   background-color: #4070F4;
   visibility: hidden;
   width: 0px;
-  transition: all 0.8s ease-in-out;  
-  }
-  .nav-menu a:hover::before,
-  .nav-menu li:hover > a::before,
-  .nav-menu .active > a::before{
-    visibility: visible;
-    width: 100%;
-  }
-  .nav-menu a:hover,
-  .nav-menu .active > a,
-  .nav-menu li:hover > a{
-    color: #fff;
-  }
-  /* Botão "Contato" */
-  .get-started-btn{
-    margin-left: 25px;
-    color: #fff;
-    border-radius: 4px;
-    padding: 6px 25px 8px 25px;
-    white-space: nowrap;
-    transition: 0.3s;
-    font-size: 13px;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-family: "Poppins", sans-serif;
-    border: 2px solid #4070F4;
-  }
-  .get-started-btn:hover {
-    background: #4070F4;
-    color: #fff;
-  }
-  
-
-
-  
-  /* Responsividade */
-  @media (max-width: 999px){
-    .titulo-cabecalho-bootstrap .titulo {
-      font-size: 1.5625em;
-      color: #fff;
-      font-family: Arial, Helvetica, sans-serif;
-      margin-left: -1.8em;
-    }
-    
-    .titulo-cabecalho-bootstrap .texto {
-      font-size: 1.125em;
-      color: #fff;
-      margin-left: -1.5em;
-    }
-
-    .titulo-cabecalho-bootstrap-1 h3{
-      text-align: left;
-
-    }
-    
-    .get-started-btn{
-      margin: 0 30px 0 0;
-      padding: 6px 18px;
-    }
-    /* Estilo para o ícone do menu hambúrguer */
-.hamburger-menu {
-  display: block;
-  position: absolute;
-  right: 13px; /* Ajuste a distância da direita conforme necessário */
-  font-size: 25px;
+  transition: all 0.8s ease-in-out;
 }
 
-.nav-menu > ul > li a::before{
-  display: none;
-
+/* Animação da linha ao passar o mouse */
+.nav-menu a:hover::before,
+.nav-menu li:hover > a::before,
+.nav-menu .active > a::before {
+  visibility: visible;
+  width: 100%;
 }
 
-
-/* Estilo para a classe .custom-nav-menu */
-.custom-nav-menu {
-  position: absolute; /* Mova o menu para a parte superior da página */
-  top: 100%; /* Alinhe o menu abaixo do ícone do menu hambúrguer */
-  left: 0.0em; /* Alinhe o menu à esquerda */
-}
-  }
-
-
-  
-
-/* Responsividade para Iphone */
-@media (max-width: 402px) {
-  .titulo-cabecalho-bootstrap .titulo{
-    font-size: 1.215em;
-    text-align: justify;
-    font-family: Arial, sans-serif;
-    margin-left: -2.4em;
-  }
-
-  .titulo-cabecalho-bootstrap .texto{
-    font-size: 1.125em; /* Define um tamanho de fonte específico para elementos p com classe .texto */
-    font-family: Arial, Helvetica, sans-serif;
-  }
+/* Cor do texto ao passar o mouse ou link ativo */
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #fff;
 }
 
+/* Botão "Contato" */
+.get-started-btn {
+  margin-left: 25px;
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 25px 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 13px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #4070F4;
+}
+
+/* Estilo do botão ao passar o mouse */
+.get-started-btn:hover {
+  background: #4070F4;
+  color: #fff;
+}
 
 /* Responsividade */
 @media (max-width: 999px) {
-
-  .logo-image {
-    max-width: 70px;
-      margin-right: 10px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
-      margin-left: -15%;
+  .titulo-cabecalho-bootstrap .titulo {
+    font-size: 1.5625em;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: -1.8em;
   }
+
+  .titulo-cabecalho-bootstrap .texto {
+    font-size: 1.125em;
+    color: #fff;
+    margin-left: -1.5em;
+  }
+
+  .titulo-cabecalho-bootstrap-1 h3 {
+    text-align: left;
+  }
+
   .get-started-btn {
     margin: 0 30px 0 0;
     padding: 6px 18px;
@@ -194,372 +166,143 @@ h1,h2,h3,h4,h5,h6{
   .hamburger-menu {
     display: block;
     position: absolute;
-    right: 13px; /* Ajuste a distância da direita conforme necessário */
+    right: 13px; 
     font-size: 25px;
   }
-  .nav-menu {
-    /* Seus estilos existentes da barra de navegação */
-    transition: opacity 0.3s; /* Adicione uma transição de 0.3 segundos para o efeito de desvanecimento */
-  }
-  
-  .nav-menu.recolhida {
-    opacity: 0; /* Torna a barra de navegação transparente quando a classe 'recolhida' é aplicada */
-    pointer-events: none; /* Impede a interação com a barra de navegação recolhida */
-  }
-  
 
   .nav-menu > ul > li a::before {
     display: none;
   }
 
-
-
-
-
-  /* Estilo para mostrar o menu como colunas quando expandido */
-.custom-nav-menu.show-menu ul {
-  display: flex;
-  flex-direction: column; /* Exibir os itens do menu em colunas */
-  align-items: center; /* Centralizar os itens na coluna */
-  text-align: center; /* Centralizar o texto */
-}
-
-.custom-nav-menu.show-menu a {
-  padding: 6px; /* Ajuste o espaçamento dos itens de menu no menu responsivo */
-  display: block; /* Certifique-se de que os itens de menu ocupem toda a largura */
-  color: white; /* Defina a cor do texto para branco */
-  text-decoration: none; /* Remover sublinhado dos links */
-  transition: color 0.2s; /* Adicionar uma transição suave de cor */
-}
-
-.custom-nav-menu.show-menu a:hover {
-  color: #4070F4; /* Cor ao passar o mouse sobre os itens do menu */
-}
-
-
   /* Estilo para a classe .custom-nav-menu */
   .custom-nav-menu {
-    position: absolute; /* Mova o menu para a parte superior da página */
-    top: 100%; /* Alinhe o menu abaixo do ícone do menu hambúrguer */
-    left: 0.0em; /* Alinhe o menu à esquerda */
-    background: #333; /* Adicione um fundo para o menu responsivo */
-    width: 100%; /* Faça o menu ocupar a largura total da tela */
-    display: none; /* Inicialmente, oculte o menu responsivo */
-  }
-  /* Estilo para os itens de menu no menu de navegação */
-  .custom-nav-menu a {
-    padding: 1em; /* Ajuste o espaçamento dos itens de menu no menu responsivo */
-    display: block; /* Certifique-se de que os itens de menu ocupem toda a largura */
-    color: white; /* Defina a cor do texto para branco */
-  }
-
-  /* Estilo para mostrar o menu como colunas quando expandido */
-  .custom-nav-menu.show-menu {
-    display: block; /* Exiba o menu responsivo quando a classe show-menu está presente */
+    position: absolute; 
+    top: 100%; 
+    left: 0.0em; 
   }
 }
 
+/* Responsividade para iPhone */
+@media (max-width: 402px) {
+  .titulo-cabecalho-bootstrap .titulo {
+    font-size: 1.215rem; 
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    margin-left: -2.4em; 
+  }
+
+  .titulo-cabecalho-bootstrap .texto {
+    font-size: 1.125rem; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 999px) {
+  .logo-image {
+    max-width: 70px;
+    margin-right: 10px;
+    margin-left: -15%; 
+  }
+
+  .get-started-btn {
+    margin: 0 30px 0 0;
+    padding: 6px 18px;
+  }
+
+  /* Ícone do menu hambúrguer */
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 13px;
+    font-size: 25px;
+  }
+
+  /* Barra de navegação */
+  .nav-menu {
+    transition: opacity 0.3s;
+  }
+
+  .nav-menu.recolhida {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Remova os pontos antes dos links do menu */
+  .nav-menu > ul > li a::before {
+    display: none;
+  }
+
+  /* Estilo para mostrar o menu como colunas quando expandido */
+  .custom-nav-menu.show-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .custom-nav-menu.show-menu a {
+    padding: 6px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .custom-nav-menu.show-menu a:hover {
+    color: #4070F4;
+  }
+
+  /* Estilo para o menu de navegação */
+  .custom-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    width: 100%;
+    display: none;
+  }
+
+  .custom-nav-menu a {
+    padding: 1em;
+    display: block;
+    color: white;
+  }
+
+  .custom-nav-menu.show-menu {
+    display: block;
+  }
+}
+
+/* Estilo para os ícones do menu */
+.hamburger-icon,
+.close-icon {
+  display: inline-block;
+}
+
+/* Ícone de fechar inicialmente oculto */
+.close-icon {
+  display: none;
+}
+
+/* Estilo para ambos os ícones */
+.hamburger-icon .fa-bars,
 .close-icon .fa-times {
   background: -webkit-linear-gradient(45deg, #1d4ed8, #1b3c5d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block; /* Necessário para background-clip */
 }
 
-
-.hamburger-icon .fa-bars {
-    background: -webkit-linear-gradient(45deg, #1d4ed8, #1b3c5d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block; /* Necessário para background-clip */
-  }
-  
-.hamburger-icon {
-    display: block; /* Mostra por padrão */
-  }
-  
-  .close-icon {
-    display: none; /* Oculta por padrão */
-  }
-  
-  /* Quando o menu estiver ativo, esconde o ícone do hambúrguer e mostra o "X" */
-  .show-menu .hamburger-icon {
-    display: none;
-  }
-  
-  .show-menu .close-icon {
-    display: block;
-  }
-  
-
-
-
-
-/* Site História programação*/
-
-
-body{
-  margin: 0;
-  font-family: sans-serif;
+/* Quando o menu está ativo, esconde o ícone do menu hambúrguer e mostra o "X" */
+.show-menu .hamburger-icon {
+  display: none;
 }
 
-.secao{
-  display: flex;
-  width: 100%;
-}
-.secao img{
-  height: 250px;
-  margin-top: 13%;
-  border-radius: 70px;
-}
-.secao p{
-  margin-right: 15px;
-}
-.secao strong {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-#card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+.show-menu .close-icon {
+  display: inline-block;
 }
 
-#card.aparecer {
-  opacity: 1;
-  transform: translateY(0);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.texto {
-  padding: 20px;
-}
-
-img {
-  height: auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.secao-babbage {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  margin-bottom: 20px; /* Adicione margem inferior conforme necessário */
-}
-
-.secao-babbage img {
-  height: 250px;
-  margin-right: 15px; /* Ajuste a margem entre a imagem e o texto conforme necessário */
-  border-radius: 70px;
-}
-
-.secao-babbage .texto {
-  flex: 1; /* Ocupar todo o espaço disponível */
-}
-
-.secao-babbage p {
-  margin-top: 0; /* Remover a margem superior padrão */
-}
-
-.secao-babbage strong {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-a:hover {
-  color: blue;
-}
-a {
-  color: blue;
-  /* Adicione mais estilos conforme necessário */
-}
-
-
-
-
-/* Site História programação*/
-.cabecalho-historia-programacao{
-    margin-top: 130px;
-    transition: margin-top 0.3s; /* Adicione uma transição suave */
-}
-.cabecalho-historia-programacao h2{
-  font-size: 1.5625em;
-}
-.cabecalho-historia-programacao p{
-font-size: 1.125em;
-margin: 1.2em;
-}
-
-/* Site História computação*/
-
-.image-computador-eniac {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.computador-eniac {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-.image-colossus {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.colossus {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-.image-cartao {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cartao {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-
-.image-telegrafo {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.telegrafo {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-.image-maquina {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.maquina {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-.image-abaco {
-  width: 23.25em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.abaco {
-  width: 21.25em;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-.cabecalho-historia-computacao{
-  margin-top: 130px;
-  transition: margin-top 0.3s; /* Adicione uma transição suave */
-}
-.cabecalho-historia-computacao h3{
-font-size: 1.5625em;
-}
-.cabecalho-historia-computacao p{
-font-size: 1.125em;
-}
-
-@media (max-width: 999px){
-  .secao{
-    display: flex;
-    width: 100%;
-  }
-  .secao img{
-    height: 250px;
-    margin-top: 7%;
-  }
-  .secao p{
-    margin-right: 18px;
-  }
-
-  .secao-babbage {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  margin-bottom: 20px; /* Adicione margem inferior conforme necessário */
-  margin-top: 10%; /* Remover a margem superior padrão */
-}
-
-.secao-babbage img {
-  height: 250px;
-  margin-right: 18px; /* Ajuste a margem entre a imagem e o texto conforme necessário */
-}
-
-.secao-babbage .texto {
-  flex: 1; /* Ocupar todo o espaço disponível */
-}
-
-.secao-babbage p {
-  margin-top: 0; /* Remover a margem superior padrão */
-}
-
-.secao-babbage strong {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-}
-
-body{
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* Site Paradigmas*/
-.cabecalho-paradigmas{
-  margin-top: 130px;
-  transition: margin-top 0.3s; /* Adicione uma transição suave */
-}
-.cabecalho-paradigmas h2{
-font-size: 1.5625em;
-}
-.cabecalho-paradigmas p{
-font-size: 1.125em;
-}
-
-
-
-
-
-
+/* Estilização para o Início da Página */
 .titulo-cabecalho-bootstrap {
   background-color: #333;
   margin-top: 150px;
@@ -571,8 +314,7 @@ font-size: 1.125em;
   padding-bottom: 5rem !important;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
-  transition: margin-top 0.3s; /* Adicione uma transição suave */
-  
+  transition: margin-top 0.3s;
 }
 
 .titulo-cabecalho-bootstrap h2 {
@@ -589,77 +331,70 @@ font-size: 1.125em;
   text-align: left;
 }
 
-.estilo{
+/* Estilização para links no cabeçalho */
+.estilo {
   color: #4070F4;
 }
 
-/* Estilo padrão para os nomes */
-.nome {
+.nome, .nome:hover {
   color: #fff;
+  cursor: pointer;
 }
 
-/* Estilo para os nomes quando o mouse está sobre eles (hover) */
 .nome:hover {
-  color: #fff; 
-  cursor: pointer;
   text-decoration: underline;
 }
 
-
-.image-eniac {
-  width: 23.25em; /* Isso afetará o contêiner da imagem em todos os tamanhos de tela */
-}
-/* Opcional: Defina um tamanho mínimo para que a imagem nunca fique abaixo disso */
-.eniac {
-  width: 21.25em; /* ou o tamanho max que você considera adequado */
-  margin: 1em auto; /* Adiciona 1em de margem no topo e na parte inferior, e automático dos lados */
+/* Estilização para a imagem Eniac */
+.image-eniac, .eniac {
+  width: 23.25em; 
+  margin: 1em auto; 
   display: block;
 }
 
-
-
-/* Segundo TxT */
-.texto-introducao{
+/* Estilização para segundo TxT Inicio */
+.texto-introducao {
   margin-top: 60px;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-
 }
-.texto-introducao h3{
+
+.texto-introducao h3 {
   font-size: 1.75em;
-  color: #000;
   font-weight: 1000;
-  font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
 }
 
-.texto-introducao p{
+.texto-introducao p {
   font-size: 1.125em;
-  color: #000;
   margin: 20px;
 }
 
+/* Aqui eu defini variáveis para reutilização */
+:root {
+  --cor-texto: #000;
+  --fonte-padrão: Arial, Helvetica, sans-serif;
+}
 
-/* Terceiro TxT */
-.titulo-cabecalho-bootstrap-1{
+/* Estilização para terceiro TxT Inicio */
+.titulo-cabecalho-bootstrap-1 {
   margin-top: 60px;
-  color: #000;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-texto);
+  font-family: var(--fonte-padrão);
 }
 
 .titulo-cabecalho-bootstrap-1 h3 {
   font-size: 1.75em;
-  color: #000;
   font-weight: 1000;
-  font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
 }
 
 .titulo-cabecalho-bootstrap-1 p {
   font-size: 1.125em;
-  color: #000;
   margin: 20px;
 }
+
+/*Estilização para slide de perfil */
 .body1{
 min-height: 100vh;
 display: flex;
@@ -667,11 +402,10 @@ align-items: center;
 justify-content: center;
 background-color: #fff;
 }
-.slide-container{
-  width: 33.33%;
+.slide-container {
   max-width: 1120px;
   width: 100%;
-  padding: 40px 0 ;
+  padding: 40px 0;
 }
 .slide-content{
   margin: 0 40px;
@@ -739,7 +473,7 @@ background-color: #fff;
 }
 .descricao{
   font-size: 14px;
-  color: #707070;
+  color: #000;
   text-align: center;
 }
 .button{
@@ -780,142 +514,333 @@ background-color: #fff;
 .swiper-pagination.bullet{
   background-color: #4070F4;
 }
-@media screen and(max-width:768px){
-  .slide-content{
+
+/* Estilização para slide de perfil em telas menores */
+@media screen and(max-width: 768px) {
+  .slide-content {
     display: none;
   }
-  .swiper-navBtn{
+  .swiper-navBtn {
     margin: 0 10px;
   }
 }
+
+/*Estilização para seção História computação*/
+
+/* Estilização para adicionar pontos pretos antes de cada palavra */
+.destacar-texto::before {
+  content: '\2022'; 
+  color: black; 
+  margin-right: 5px; 
+}
+/* Exemplo de uso */
+.destacar-texto {
+  display: inline;
+}
+/* Estilização para imagens */
+.image-computador {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-pcs,
+.image-ibm360,
+.image-univac,
+.image-eniac,
+.image-colossus,
+.image-cartao,
+.image-telegrafo,
+.image-maquina,
+.image-abaco {
+  width: 23.25em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilização para os containers */
+.computador,
+.surgimento,
+.pcs,
+.ibm360,
+.univac,
+.eniac,
+.colossus,
+.cartao,
+.telegrafo,
+.maquina,
+.abaco {
+  width: 21.25em;
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.cabecalho-historia-computacao{
+  margin-top: 130px;
+  transition: margin-top 0.3s;
+}
+.cabecalho-historia-computacao h3{
+font-size: 1.5625em;
+}
+.cabecalho-historia-computacao p{
+font-size: 1.125em;
+}
+
+/* Estilização para telas menores (max-width: 768px) - História Programação e Início */
 @media (max-width: 768px) {
+  /* Estilização para a seção principal em telas menores */
   .secao {
-    flex-direction: column; /* exibe os elementos em coluna em telas menores */
+    flex-direction: column;
   }
-  .secao p{
+  .secao p {
     margin: 0.5em;
   }
-  
   .secao img {
-    margin: auto; /* remove a margem direita na versão mobile */
-    max-width: 70%; /* Largura máxima para telas menores */
-    margin-top: 20px; /* Ajusta a margem superior na versão mobile */
+    margin: auto;
+    max-width: 70%;
+    margin-top: 20px;
   }
-
+  /* Estilização para a seção Babbage em telas menores */
   .secao-babbage {
     display: flex;
-    flex-direction: column; /* Mudar a direção para coluna em telas menores */
+    flex-direction: column;
     align-items: center;
     text-align: left;
     margin-bottom: 20px;
     margin-top: 10%;
   }
-  
   .secao-babbage img {
     height: 250px;
-    margin-bottom: 10px; /* Adicionar margem entre a imagem e o texto */
+    margin-bottom: 10px;
   }
-  
   .secao-babbage .texto {
     flex: 1;
-    order: -1; /* Inverter a ordem dos elementos, colocando o título acima da imagem */
+    order: -1;
   }
-  
   .secao-babbage p {
     margin-top: 0;
   }
-  
   .secao-babbage strong {
     font-size: 1.2em;
     margin-bottom: 10px;
   }
-
-  .titulo-cabecalho-bootstrap .texto{
+  /* Ajuste de posicionamento para o título do cabeçalho no Bootstrap */
+  .titulo-cabecalho-bootstrap .texto {
     margin-top: -20px;
     margin-left: -60px;
   }
+}
+
+@media (max-width: 999px) {
+  /* Estilização para a seção principal em telas pequenas */
+  .secao {
+    display: flex;
+    width: 100%;
   }
 
+  .secao img {
+    height: 250px;
+    margin-top: 7%;
+  }
 
+  .secao p {
+    margin-right: 18px;
+  }
+  /* Estilização para a seção Babbage em telas pequenas */
+  .secao-babbage {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 10%;
+  }
+  .secao-babbage img {
+    height: 250px;
+    margin-right: 18px;
+  }
+  .secao-babbage .texto {
+    flex: 1;
+  }
+  .secao-babbage p {
+    margin-top: 0;
+  }
+  .secao-babbage strong {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+}
 
+/* Estilização para a seção História Programação */
+.cabecalho-historia-programacao {
+  margin-top: 130px;
+  transition: margin-top 0.3s;
+}
+.cabecalho-historia-programacao h2 {
+  font-size: 1.5625em;
+}
+.cabecalho-historia-programacao p {
+  font-size: 1.125em;
+  margin: 1.2em;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+/* Estilização para a seção principal */
+.secao {
+  display: flex;
+  width: 100%;
+}
+.secao img {
+  height: 250px;
+  margin-top: 13%;
+  border-radius: 70px;
+}
+.secao p {
+  margin-right: 15px;
+}
+.secao strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+#card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.8s ease-in-out, box-shadow 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
 
+#card.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.texto {
+  padding: 20px;
+}
+img {
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* Estilização para a seção Babbage */
+.secao-babbage {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.secao-babbage img {
+  height: 250px;
+  margin-right: 15px;
+  border-radius: 70px;
+}
+.secao-babbage .texto {
+  flex: 1;
+}
+.secao-babbage p {
+  margin-top: 0;
+}
+.secao-babbage strong {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+/* Estilização para links */
+a:hover {
+  color: blue;
+}
+a {
+  color: blue;
+}
 
-
-
+/* Estilização para seção Paradigmas*/
+.cabecalho-paradigmas{
+  margin-top: 130px;
+  transition: margin-top 0.3s; 
+}
+.cabecalho-paradigmas h2{
+font-size: 1.5625em;
+}
+.cabecalho-paradigmas p{
+font-size: 1.125em;
+}
 
 /* Estilização para o rodapé */
 .rodape {
+  position: absolute;
+  left: 0;
+  width: 100%;
   margin-top: 110px;
-  background-color: #333; /* Cor de fundo do rodapé */
-  color: #fff; /* Cor do texto do rodapé */
-  padding: 20px 0; /* Espaçamento interno para o conteúdo do rodapé */
-  width: 100%; /* Ocupa toda a largura disponível */
-  position: absolute; /* Posição absoluta para ignorar limitações dos elementos pai */
-  left: 0; /* Alinhar o rodapé à margem esquerda */
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
 }
 
 /* Estilização para os links no rodapé */
 .rodape a {
-  color: #fff; /* Cor dos links no rodapé */
-  text-decoration: none; /* Remover sublinhado dos links */
-  transition: all 0.3s; /* Adicionar transição de 0.3 segundos */
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
 }
 
 /* Estilização para os links no rodapé no hover (ao passar o mouse) */
 .rodape a:hover {
-  text-decoration: none; /* Adicionar sublinhado no hover dos links */
+  text-decoration: none;
 }
-
 
 /* Estilização para a seção "Links Úteis" */
 .rodape .col-md-6 ul {
-  list-style: none; /* Remover marcadores de lista (bolinhas) */
-  padding: 0; /* Remover preenchimento padrão das listas */
+  list-style: none;
+  padding: 0;
 }
 
 .rodape .col-md-6 ul li {
-  margin-bottom: 8px; /* Espaçamento inferior entre os itens da lista */
+  margin-bottom: 8px;
 }
 
 .rodape .col-md-6 ul li a {
-  color: #fff; /* Cor dos links no rodapé */
-  text-decoration: none; /* Remover sublinhado dos links */
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Estilização para a seção "Contato" */
 .rodape p {
-  font-size: 17px; /* Tamanho da fonte para informações de contato */
+  font-size: 17px;
   color: #fff;
 }
 
 .highlighted-text {
-  font-size: 24px; /* Tamanho desejado */
-  font-weight: bold; /* Peso da fonte desejado, se necessário */
-  /* Outros estilos, como cor, fundo, etc. */
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .contact-info {
-  text-align: right; /* Alinhe o conteúdo à direita */
+  text-align: right;
 }
 
+/* Logotipo */
 .logo {
   display: flex;
-  align-items: center; /* Alinhe a imagem verticalmente */
+  align-items: center;
   cursor: pointer;
+}
+
+.logo-image {
+  max-width: 70px;
+  margin-right: -5px;
+  margin-left: -15%;
 }
 
 /* Estilização para os direitos autorais */
 .direitos-autorais {
-  text-align: center; /* Centralizar o texto */
-  font-size: 14px; /* Tamanho da fonte desejado */
-  color: #fff; /* Cor do texto */
-  margin-top: 10px; /* Espaçamento superior, se necessário */
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 10px;
 }
 
-
-/* Logotipo */
-.logo-image {
-  max-width: 70px;
-    margin-right: -5px; /* Margem à direita da imagem para separá-la do texto GRUPO XD */
-    margin-left: -15%;
-}
